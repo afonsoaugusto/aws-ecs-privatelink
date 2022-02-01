@@ -10,7 +10,7 @@ variable "vpc_cidr" {
 }
 
 variable "subnet_1a_public_name" {
-  description = "name of public subnet in eu-west-1a"
+  description = "name of public subnet in us-east-1a"
   type        = string
   default     = "subnet-1a-public"
 }
@@ -21,7 +21,7 @@ variable "subnet_1a_public_cidr" {
 }
 
 variable "subnet_1b_public_name" {
-  description = "name of public subnet in eu-west-1b"
+  description = "name of public subnet in us-east-1b"
   type        = string
   default     = "subnet-1b-public"
 }
@@ -32,7 +32,7 @@ variable "subnet_1b_public_cidr" {
 }
 
 variable "subnet_1a_private_name" {
-  description = "name of private subnet in eu-west-1a"
+  description = "name of private subnet in us-east-1a"
   type        = string
   default     = "subnet-1a-private"
 }
@@ -43,7 +43,7 @@ variable "subnet_1a_private_cidr" {
 }
 
 variable "subnet_1b_private_name" {
-  description = "name of private subnet in eu-west-1b"
+  description = "name of private subnet in us-east-1b"
   type        = string
   default     = "subnet-1b-private"
 }
@@ -60,7 +60,7 @@ variable "igw_name" {
 }
 
 variable "nat_name" {
-  description = "name of NAT gateway in eu-west-1a"
+  description = "name of NAT gateway in us-east-1a"
   type        = string
   default     = "natgw"
 }

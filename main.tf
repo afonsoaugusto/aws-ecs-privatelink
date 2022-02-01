@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1"
+  region = "us-east-1"
 }
 
 module "network" {
@@ -18,7 +18,7 @@ module "ecs" {
   ecs_container_name   = "demo"
   ecs_port             = var.ecs_port # we use networkMode awsvpc so host and container ports should match
   ecs_task_def_name    = "demo-task"
-  ecs_docker_image     = "lvthillo/python-flask-api"
+  ecs_docker_image     = "afonsoaugusto/api-uuid"
   vpc_id               = module.network.vpc_id
   alb_sg               = module.alb.alb_sg
   alb_target_group_arn = module.alb.alb_tg_arn
@@ -86,7 +86,7 @@ module "ec2_instance_added" {
   version                     = "~> 3.0"
   name                        = "test-instance-vpc-2"
   associate_public_ip_address = true
-  ami                         = "ami-05cd35b907b4ffe77" # eu-west-1 specific
+  ami                         = "ami-0ec2468df0eaa55ff" # us-east-1 specific
   instance_type               = "t2.micro"
   key_name                    = var.key
   vpc_security_group_ids      = [aws_security_group.ssh_sg_added.id]
